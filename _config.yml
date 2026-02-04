@@ -12,4 +12,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /notes/assets/og-default.png
+      image: /assets/og-default.png
