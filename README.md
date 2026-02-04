@@ -9,3 +9,4 @@ Knowledge base — заметки, разборы, документация.
 | [apple-farm/](apple-farm/) | Apple Developer регистрация |
 | [infra/](infra/) | Инфраструктура, сети, серверы |
 | [tools/](tools/) | Инструменты и сервисы |
+| [docs/](docs/) | Документация и справочники |
