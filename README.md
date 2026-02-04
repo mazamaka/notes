@@ -1,39 +1,29 @@
 # Notes
 
-Knowledge base — заметки, разборы, документация для Claude-агентов.
+Knowledge base — документация которой НЕТ в Context7.
+
+Для популярных библиотек (FastAPI, SQLModel, Playwright и т.д.) используй Context7.
+Здесь только уникальные доки по нишевым API и сервисам.
 
 ## Подключение к агентам
 
 ```
+Glob("*.md", path="/Users/admin/PycharmProjects/notes/docs/")
 Read tool → /Users/admin/PycharmProjects/notes/docs/<file>.md
 ```
 
-## docs/ — справочники библиотек и API
-
-### Автообновляемые (из llms.txt)
-
-| Файл | Источник | Описание |
-|------|----------|----------|
-| [browser-use.md](docs/browser-use.md) | [llms-full.txt](https://docs.browser-use.com/llms-full.txt) | Browser Use — LLM browser automation |
-| [ruff.md](docs/ruff.md) | [llms.txt](https://docs.astral.sh/ruff/llms.txt) | Ruff — Python linter/formatter |
-| [uv.md](docs/uv.md) | [llms.txt](https://docs.astral.sh/uv/llms.txt) | uv — Python package manager |
-
-### Ручные
+## docs/ — уникальные API и сервисы
 
 | Файл | Описание |
 |------|----------|
-| [fastapi.md](docs/fastapi.md) | FastAPI — веб-фреймворк |
-| [sqlmodel.md](docs/sqlmodel.md) | SQLModel — ORM для FastAPI |
-| [sqladmin.md](docs/sqladmin.md) | SQLAdmin — админка для SQLAlchemy |
-| [starlette-admin.md](docs/starlette-admin.md) | Starlette-Admin — админ-интерфейс |
-| [octo-browser-api.md](docs/octo-browser-api.md) | Octo Browser — антидетект API |
+| [octo-browser-api.md](docs/octo-browser-api.md) | Octo Browser — антидетект браузер API |
 | [octo-browser-faq.md](docs/octo-browser-faq.md) | Octo Browser — FAQ |
 | [smspva-api.md](docs/smspva-api.md) | SMSPVA — SMS-верификация API |
 | [soax-proxy-api.md](docs/soax-proxy-api.md) | SOAX — прокси API |
 | [telegraph-api.md](docs/telegraph-api.md) | Telegraph — публикация статей API |
 | [telegram-instant-view.md](docs/telegram-instant-view.md) | Telegram Instant View — шаблоны |
 
-## apple-farm/ — заметки по проекту
+## apple-farm/
 
 | Файл | Описание |
 |------|----------|
@@ -42,7 +32,5 @@ Read tool → /Users/admin/PycharmProjects/notes/docs/<file>.md
 ## Скрипты
 
 ```bash
-python update_docs.py          # обновить доки из llms.txt источников
-python update_docs.py --list   # показать источники и статус
 python publish_telegraph.py <file.md>  # опубликовать в Telegraph
 ```
