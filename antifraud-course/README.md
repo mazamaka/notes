@@ -1,8 +1,9 @@
 # Курс по антифрод-системам от Вектор Т13
 
 **Транскрибировано:** 2026-02-08
-**Количество уроков:** 11
-**Общая длительность:** ~4.5 часа
+**Количество уроков:** 15
+**Общая длительность:** ~8 часов
+**LLM Index:** [llms.txt](llms.txt)
 
 ---
 
@@ -21,6 +22,10 @@
 | 09 | [Canvas Fake of Fakes](09-canvas-fake-of-fakes.md) | 31 мин | CPU vs GPU Canvas, 10 лет фейка |
 | 10 | [M1D и M1D1](10-m1d-m1d1.md) | 43 мин | TCP+UDP+QUIC, SOCKS5 умрёт |
 | 11 | [Free Antifraud](11-free-antifraud-system.md) | 8 мин | IPQS Enterprise бесплатно |
+| 12 | [VPN Detection & Geolocation](12_VPN_Detection_Geolocation.md) | 60 мин | 10 методов геолокации, Maxmind, ASN |
+| 13 | [Anonymity & Deanonymization](13_Anonymity_Deanonymization.md) | 90 мин | Браузеры, TPM, ультразвук, крипто |
+| 14 | [Cloud AntiDetect Router](14_Cloud_AntiDetect_Router.md) | 35 мин | OpenWRT на VPS, MTU 1500, QUIC |
+| 15 | [VM Detection & Bypass](15_VM_Detection_Bypass.md) | 60 мин | VirtualBox OSE, античиты, CPUID |
 
 ---
 

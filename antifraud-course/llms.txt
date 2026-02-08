@@ -1,0 +1,167 @@
+# Antifraud & Antidetect Knowledge Base
+# Author: Vektor T13
+# Last Updated: 2026-02-08
+# Total Lessons: 15
+
+> This knowledge base contains transcribed webinars about antifraud systems,
+> browser fingerprinting, VM detection, VPN/proxy detection, and anonymity.
+> Use for reference when developing antifraud/antidetect solutions.
+
+## Quick Reference
+
+### Key Insights
+- Benchmark > Hash: Performance measurement beats hash spoofing
+- SOCKS5 is dying: M1D (TCP+UDP) detects it 100%
+- DNS = Fingerprint: Shared between Google, banks, Meta via M3AAWG
+- Public checkers = Honeypots: BrowserLeaks, fingerprint.com collect data
+
+---
+
+## Browser Fingerprinting
+
+### Canvas Fingerprint
+> /antifraud-course/09-canvas-fake-of-fakes.md
+- CPU Canvas has ~400 variants, antidetects don't distinguish
+- 10 years of fake detection evolution
+- GPU vs CPU rendering differences
+
+### WebGL Fingerprint
+> /antifraud-course/05-webgl-fingerprint.md
+- FPS benchmark more important than hash
+- 43-48 FPS = VM/VPS/Bot detection
+- Performance-based identification
+
+### WebGPU (New System)
+> /antifraud-course/03-webgpu-new-system.md
+> /antifraud-course/04-webgpu-performance.md
+- WebGL deprecated, WebGPU replacing
+- Atomic Fingerprint 70% accuracy
+- V-Sec 2025 implementation
+
+### Audio Fingerprint
+> /antifraud-course/08-audiocontext.md
+- Actually CPU fingerprint, not audio
+- 45-50ms timing = VM/VPS detection
+- AudioContext API abuse
+
+### WebAssembly Fingerprint
+> /antifraud-course/07-webassembly-fingerprint.md
+- 99% accuracy identification
+- Used by Microsoft, CyberSource
+- PerimeterX early stage
+
+### Browser FM (Full Metrics)
+> /antifraud-course/06-browser-fm.md
+- 16000 parameters collected
+- Fuzzy Hashing for comparison
+- 99.7% accuracy
+
+---
+
+## Network Fingerprinting
+
+### DNS as Identifier
+> /antifraud-course/02-dns-identifier.md
+- DNS fingerprint same as IP
+- M3AAWG, FS-ISAC data sharing
+- Proxy warmup required
+
+### M1D / M1D1 Protocol Analysis
+> /antifraud-course/10-m1d-m1d1.md
+- TCP: 60% OS identification (Zardax)
+- M1D (TCP+UDP): 100% SOCKS5 detection
+- M1D1 (TCP+UDP+QUIC): 95% user identification
+- SOCKS5 will die, need full protocol support
+
+---
+
+## VPN & Proxy Detection
+
+### 10 Geolocation Methods
+> /antifraud-course/12_VPN_Detection_Geolocation.md
+- IP-based, ASN, Traceroute/TTL
+- DNS leaks, Timezone, Language
+- WebRTC, JavaScript API, IPv6 leaks
+- WiFi BSSID geolocation
+- Maxmind is the source of truth
+
+### Cloud AntiDetect Router
+> /antifraud-course/14_Cloud_AntiDetect_Router.md
+- OpenWRT on VPS for proxification
+- Proper MTU 1500, IPv6, WebRTC, QUIC
+- Better than software proxifiers
+- GitHub open source project
+
+---
+
+## Anonymity & Deanonymization
+
+### Ultimate Anonymity 2026
+> /antifraud-course/13_Anonymity_Deanonymization.md
+- 4 blocks: Browser, Hardware, Network, Crypto
+- Balaclava principle: excessive anonymity = uniqueness
+- Corporate browsers unsafe (Chrome, Firefox, Edge)
+- Ungoogled Chrome recommended
+- Ultrasonic beacons for tracking
+- TPM chips, Apple Secure Enclave
+
+---
+
+## Virtual Machine Detection
+
+### VM Detection & Bypass
+> /antifraud-course/15_VM_Detection_Bypass.md
+- VirtualBox OSE best for hiding (open source)
+- VMWare has backdoor (port 5658)
+- CPUID hypervisor bit
+- Kernel/drivers hardest to bypass
+- Anticheat = most advanced detection
+- WebGPU support in Antidetect 5
+
+---
+
+## Antifraud Systems Analysis
+
+### Chase Bank (ThreatMetrix + Akamai)
+> /antifraud-course/01-chase-antifraud.md
+- ThreatMetrix TURN protocol
+- Akamai IP reputation, latency
+- HAR analysis methodology
+
+### Free Enterprise Antifraud
+> /antifraud-course/11-free-antifraud-system.md
+- IPQS Enterprise free via Indeed
+- How to access paid features
+
+---
+
+## Tools Mentioned
+
+| Tool | Purpose |
+|------|---------|
+| chrome://net-export | Network traffic logging |
+| netlog-viewer | QUIC/UDP analysis |
+| TCP Optimizer | Network parameters |
+| DNS Benchmark | DNS server testing |
+| DetectExpert | Author's checkers |
+| HAR Export | Request analysis |
+
+---
+
+## Full Transcripts
+
+Available in /antifraud-course/transcripts/:
+- .txt - plain text
+- .json - with timestamps
+- .srt/.vtt - subtitles
+
+---
+
+# How to Use
+
+For Claude Code: fetch specific .md files based on context:
+```
+WebFetch("https://mazamaka.github.io/notes/antifraud-course/12_VPN_Detection_Geolocation.md")
+```
+
+For search: use keywords from this index to find relevant sections.
